@@ -39,19 +39,26 @@ Bu proje, etkinlik katılımcılarını yönetmek için bir Django tabanlı web 
     pip install -r requirements.txt
     ```
 
-4. Veritabanını oluşturun ve gerekli migrasyonları uygulayın:
+4. Ortam değişkenlerini ayarlayın (üretimde `DJANGO_DEBUG` tanımlamayın):
+    ```bash
+    export DJANGO_SECRET_KEY="$(python -c 'import secrets; print(secrets.token_urlsafe(50))')"
+    export DJANGO_DEBUG=True                      # yalnız yerel geliştirme
+    export DJANGO_ALLOWED_HOSTS=127.0.0.1,localhost
+    ```
+
+5. Veritabanını oluşturun ve gerekli migrasyonları uygulayın:
     ```bash
     python manage.py migrate
     ```
 
-5. Geliştirme sunucusunu başlatın:
+6. Geliştirme sunucusunu başlatın:
     ```bash
     python manage.py runserver
     ```
 
-6. Tarayıcınızda `http://127.0.0.1:8000/` adresine gidin.
+7. Tarayıcınızda `http://127.0.0.1:8000/` adresine gidin.
 
-7. Yönetici paneline erişmek için superadmin hesabı oluşturun
+8. Yönetici paneline erişmek için superadmin hesabı oluşturun
     ```bash
     python manage.py createsuperuser
     ```
@@ -65,7 +72,7 @@ Bu proje, etkinlik katılımcılarını yönetmek için bir Django tabanlı web 
 
 ### Katılımcı Listesi
 
-1. `http://127.0.0.1:8000/katilimci-listesi/` adresine gidin.
+1. `http://127.0.0.1:8000/etkinlik/katilimci-listesi/` adresine gidin.
 2. Katılım yapan ve yapmayan katılımcıları görüntüleyin.
 3. Yeni katılımcı eklemek için formu doldurun ve "Ekle" butonuna tıklayın.
 

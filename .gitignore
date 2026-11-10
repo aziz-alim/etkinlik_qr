@@ -54,3 +54,5 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
+# collectstatic çıktısı
+staticfiles/

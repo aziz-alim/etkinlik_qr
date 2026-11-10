@@ -24,7 +24,7 @@ Bu proje, etkinlik katılımcılarını yönetmek için bir Django tabanlı web 
 
 1. Bu projeyi klonlayın:
     ```bash
-    git clone https://github.com/aziz-mevlana/etkinlik_qr.git
+    git clone https://github.com/aziz-alim/etkinlik_qr.git
     cd etkinlik_qr
     ```
 
